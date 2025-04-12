@@ -81,16 +81,15 @@ function App() {
         }
       />
 
-      <Route
-        path="/ai-business-help"
-        element={
-          <ProtectedRoute>
-            <MainLayout>
-              <AIBusinessHelp />
-            </MainLayout>
-          </ProtectedRoute>
-        }
-      />
+      <Route 
+        path="/ai-business-help" 
+        element={ 
+        <ProtectedRoute> 
+          <MainLayout> 
+            <AIBusinessHelp 
+            currentUser={useAuth().currentUser} 
+            /> </MainLayout> 
+            </ProtectedRoute> } />
 
       <Route
         path="/settings"
@@ -113,7 +112,7 @@ function App() {
           </ProtectedRoute>
         }
       />
-    </Routes>
+      </Routes>
   );
 }
 
